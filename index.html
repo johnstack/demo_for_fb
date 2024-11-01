@@ -25,9 +25,15 @@
 		#randomImage2 {
 			position: absolute;
   			top: 50px;
- 			left: 100px;
+ 			left: 50px;
 			}
-	</style>
+		#randomImage3 {
+			position: absolute;
+  			top: 100px;
+ 			left: 250px;
+			}
+			
+		</style>
     
     
 </head>
@@ -35,7 +41,7 @@
 
 	<div id="card">
 
-    <img id="randomImage1" src="" alt="Random Image 1">
+    <img id="randomImage1" src="" alt="Random Image 1" style="z-index: 100;">
 
     <script>
         // Array containing the paths to your images
@@ -58,8 +64,31 @@
        //  window.onload = displayRandomImage1;
     </script>
     
+     <img id="randomImage3" src="" alt="Random Image 3" style="width: 100px; height 100px;  z-index: 1000;">
+
+    <script>
+        // Array containing the paths to your images
+        const images3 = [
+            'images/image7.png',
+            'images/image8.png',
+            'images/image9.png'
+        ];
+
+        // Function to select a random image
+        function displayRandomImage3() {
+            const randomIndex3 = Math.floor(Math.random() * images3.length);
+            const selectedImage3 = images3[randomIndex3];
+
+            // Set the src attribute of the img tag to the selected image
+            document.getElementById('randomImage3').src = selectedImage3;
+        }
+
+        // Call the function to display a random image
+       //  window.onload = displayRandomImage1;
+    </script>
     
-    <img id="randomImage2" src="" alt="Random Image 2" style="width: 100px; height 100px;">
+    
+    <img id="randomImage2" src="" alt="Random Image 2" style="width: 100px; height 100px; z-index: 500;">
 
     <script>
         // Array containing the paths to your images
@@ -84,6 +113,7 @@
         window.onload=function(){
 			displayRandomImage1();
 			displayRandomImage2();
+			displayRandomImage3();
 			}
     </script>
     
