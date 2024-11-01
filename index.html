@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Image on Page Refresh</title>
+    
+    <style>
+		body {
+ 		 background-color: linen;
+			}
+			
+		#card {
+  			width=500;
+  			height=300;
+			}
+			
+		 #randomImage1 {
+			position: absolute;
+  			top: 0px;
+ 			left: 0px;
+ 			width: 500px;
+			}	
+			
+		#randomImage2 {
+			position: absolute;
+  			top: 50px;
+ 			left: 100px;
+			}
+	</style>
+    
+    
+</head>
+<body>
+
+	<div id="card">
+
+    <img id="randomImage1" src="" alt="Random Image 1">
+
+    <script>
+        // Array containing the paths to your images
+        const images1 = [
+            'images/image1.jpg',
+            'images/image2.jpg',
+            'images/image3.jpg'
+        ];
+
+        // Function to select a random image
+        function displayRandomImage1() {
+            const randomIndex1 = Math.floor(Math.random() * images1.length);
+            const selectedImage1 = images1[randomIndex1];
+
+            // Set the src attribute of the img tag to the selected image
+            document.getElementById('randomImage1').src = selectedImage1;
+        }
+
+        // Call the function to display a random image
+       //  window.onload = displayRandomImage1;
+    </script>
+    
+    
+    <img id="randomImage2" src="" alt="Random Image 2" style="width: 100px; height 100px;">
+
+    <script>
+        // Array containing the paths to your images
+        const images2 = [
+            'images/image4.png',
+            'images/image5.png',
+            'images/image6.png'
+        ];
+
+        // Function to select a random image
+        function displayRandomImage2() {
+            const randomIndex2 = Math.floor(Math.random() * images2.length);
+            const selectedImage2 = images2[randomIndex2];
+
+            // Set the src attribute of the img tag to the selected image
+            document.getElementById('randomImage2').src = selectedImage2;
+        }
+
+        // Call the function to display a random image
+        // window.onload = displayRandomImage2;
+        
+        window.onload=function(){
+			displayRandomImage1();
+			displayRandomImage2();
+			}
+    </script>
+    
+	</div>
+    
+</body>
+</html>
