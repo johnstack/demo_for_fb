@@ -3,12 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
     <title>Random Images on Page Refresh</title>
     
     <style>
     
 		body {
- 		 background-color: linen;
+ 		   background-color: linen;
 		}
 			
 		#card {
@@ -31,19 +32,19 @@
 			
 		#randomImage2 {
 			position: relative;
-  			top: -200px;
- 			left: 50px;
- 			width: 100px; 
- 			height 100px; 
+  			top: -550px;
+ 			left: 0px;
+ 			width: 850px; 
+ 			height 550px; 
 			z-index: 500;
 			}
 			
 		#randomImage3 {
 			position: relative;
-  			top: -200px;
- 			left: 250px;
-			width: 100px; 
-			height 100px;  
+  			top: -550px;
+ 			left: 0px;
+			width: 850px; 
+			height 550px;  
 			z-index: 1000;
 			}
 			
@@ -56,9 +57,9 @@
 
 	<div id="card">
 
-    <img id="randomImage1" src="" alt="Random Image 1" >
-    <img id="randomImage2" src="" alt="Random Image 2" >
-    <img id="randomImage3" src="" alt="Random Image 3" >
+    <img id="randomImage1" src="" alt="Background" >
+    <img id="randomImage2" src="" alt="Mid-ground" >
+    <img id="randomImage3" src="" alt="Foreground" >
 
 
 
@@ -79,9 +80,17 @@
             // Set the src attribute of the img tag to the selected background image
             document.getElementById('randomImage1').src = selectedImage1;
         }
+        
+        
 
- 
- 
+      // Array containing the paths to  mid-ground image
+        const images2 = [
+            'images/image4.png',
+            'images/image5.png',
+            'images/image6.png'
+        ];
+
+
        // Function to select a random mid-ground image
         function displayRandomImage2() {
             const randomIndex2 = Math.floor(Math.random() * images2.length);
@@ -91,15 +100,15 @@
             document.getElementById('randomImage2').src = selectedImage2;
         }
 
-       // Array containing the paths to  mid-ground image
-        const images2 = [
-            'images/image4.png',
-            'images/image5.png',
-            'images/image6.png'
+  
+          // Array containing the paths to foreground images
+        const images3 = [
+            'images/image7.png',
+            'images/image8.png',
+            'images/image9.png'
         ];
 
-
-
+  
         // Function to select a random foreground image
         function displayRandomImage3() {
             const randomIndex3 = Math.floor(Math.random() * images3.length);
@@ -109,12 +118,6 @@
             document.getElementById('randomImage3').src = selectedImage3;
         }
 
-        // Array containing the paths to foreground images
-        const images3 = [
-            'images/image7.png',
-            'images/image8.png',
-            'images/image9.png'
-        ];
 
 
         // Call the function to display the three random images
@@ -128,12 +131,12 @@
     
 	</div>
 	
-	<!--  Cat icon link to homepage -->
-	<div style="margin: 50px auto 50px auto; width: 50px;">
-		<a href="http://freyastack.com">
-		<img src="http://freyastack.com/android-chrome-512x512-removebg.png" alt="home" width="50" height="50" >
-		</a>
-    </div>
+		<!--  Cat icon link to homepage -->
+			<div style="margin: 50px auto 50px auto; width: 50px;">
+			<a href="http://freyastack.com">
+			<img src="http://freyastack.com/android-chrome-512x512-removebg.png" alt="home" width="50" height="50" >
+			</a>
+   		 </div>
     
 </body>
 
